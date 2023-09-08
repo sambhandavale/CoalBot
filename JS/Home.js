@@ -9,9 +9,9 @@ document.querySelector(".button").addEventListener("click", function() {
   });
 
 const autocompleteData = [
-    { name: "search", link: "./search.html" },
-    { name: "chatbot", link: "./Chatbot.html" },
-    { name: "about", link: "./About.html" },
+    { name: "login", link: "#login" },
+    { name: "chatbot", link: "#chatbot" },
+    { name: "about", link: "#about" },
 ];
 
 const searchInput = document.getElementById("search-input");
