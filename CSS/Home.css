@@ -2,14 +2,6 @@ body{
     padding:0;
     margin:0;
 }
-.frame {
-    background-color: rgba(255, 255, 255, 1);
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-}
-
 .frame .div {
     background: linear-gradient(225deg, rgba(15, 76, 97, 0.55)0.1%, #5B5B5B 55.31%, rgba(0, 0, 0, 0.55) 99.69%);
     background-blend-mode: exclusion;
@@ -18,60 +10,158 @@ body{
     position: relative;
 }
 
-.frame .div-2 {
+.frame .menu-bar {
     position: absolute;
     width: 120px;
     height: 789px;
     top: 0;
     left: 0;
+    z-index:2;
     background-color: #ffffff33;
-    border-radius: 10px 0px 0px 10px;
     overflow: hidden;
+    transition: width 1s;
+}
+.menu-bar h2{
+    font-family: 'Poppins', sans-serif;
+}
+.frame .menu-bar:hover{
+   width:280px;
 }
 
+.frame .text{
+   color:black;
+}
+
+.frame h2:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background: #183D3D;
+  transition: 0.1s;
+  bottom: 0;
+}
+.frame h2:hover:after {
+  width: 100%;
+}
+.button {
+    position: absolute;
+    top: 85px;
+    left: 120px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    font-size: 16px;
+    color: black;
+    text-align: left;
+    display: flex;
+    align-items: center;
+}
+.button h2{
+   margin:0;
+}
+.button .icon {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
 .frame .search {
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 158px;
+    top: 80px;
     left: 40px;
     object-fit: cover;
 }
 
-.frame .document {
+.search-container {
+    display: flex;
+    align-items: center;
+    width: 280px;
+    margin: 20px;
+    position: relative;
+}
+.search-bar{
+   visibility:hidden;
+}
+#search-input {
+    background-color: #ffffff33;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 20px 20px 0px 0px;
+    outline: none;
+    font-size: 16px;
     position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 424px;
-    left: 40px;
-    object-fit: cover;
+    top: 60px;
+    left: 20px;
+    visibility:hidden;
+    transition: 0.1s;
 }
-
-.frame .info {
+.autocomplete-results{
     position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 557px;
-    left: 40px;
-    object-fit: cover;
+    width: 199px;
+    top: 101.5px;
+    left: 20px;
+    background:white;
+    border-radius:0px 0px 20px 20px;
+    padding:10px;
+    cursor: pointer;
+    visibility:hidden;
+    font-family: 'Poppins', sans-serif;
 }
-
-.frame .user-interface {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 690px;
-    left: 40px;
-    object-fit: cover;
-}
-
 .frame .chatbot {
     position: absolute;
     width: 40px;
     height: 40px;
-    top: 291px;
+    top: 261px;
     left: 40px;
     object-fit: cover;
+}
+.frame .chatbot_p{
+    position: absolute;
+    top: 245px;
+    left: 120px;
+}
+.frame .document {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 394px;
+    left: 40px;
+    object-fit: cover;
+}
+.frame .document_p{
+    position: absolute;
+    top: 375px;
+    left: 120px;
+}
+.frame .info {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 527px;
+    left: 40px;
+    object-fit: cover;
+}
+.frame .info_p{
+    position: absolute;
+    top: 510px;
+    left: 120px;
+}
+.frame .user-interface {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    top: 660px;
+    left: 40px;
+    object-fit: cover;
+}
+.frame .user-interface_p{
+    position: absolute;
+    top: 640px;
+    left: 120px;
 }
 
 .frame .line1 {
@@ -195,6 +285,8 @@ body{
     background-color: #ebc562;
     border: 2px solid;
     border-color: #fff6f6;
+    transform:translateZ(30px);
+    box-shadow: 0 2px 8px rgb(0 0 0 / 70%);
 }
 
 .frame .coal {
@@ -253,7 +345,4 @@ body{
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
-}
-@media (max-width: 768px) {
-
 }
