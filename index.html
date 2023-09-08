@@ -4,7 +4,7 @@
         <title>Home</title>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="./CSS/Home.css"/>
+        <link rel="stylesheet" href="home.css"/>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
@@ -12,19 +12,31 @@
     <body>
         <div class="frame">
             <div class="div">
-                <div class="div-2">
-                    <a href="#max">
-                        <div class="mini_max">
-                            <div class="line1"></div>
-                            <div class="line2"></div>
-                            <div class="line3"></div>
-                        </div>
+                <div class="menu-bar">
+                    <div class="search-container">
+                        <input type="text" id="search-input" placeholder="Search...">
+                        <div class="autocomplete-results" id="autocomplete-results"></div>
+                    </div>
+                    <section>
+                        <img class="search" src="./images/Icons/search.png" />
+                        <button class="button"><h2>Search</h2></button>
+                    </section>
+                    <a href="#chatbot">
+                        <img class="chatbot" src="./images/Icons/chatbot.png" />
+                        <h2 class="text chatbot_p">Chatbot</h2>
                     </a>
-                    <a href="#search"><img class="search" src="./images/Icons/search.png" /></a>
-                    <a href="#chatbot"><img class="chatbot" src="./images/Icons/chatbot.png" /></a>
-                    <a href="#document"><img class="document" src="./images/Icons/document.png" /></a>
-                    <a href="#info"><img class="info" src="./images/Icons/info.png" /></a>
-                    <a href="#login"><img class="user-interface" src="./images/Icons/user-interface.png"/></a>
+                    <a href="#document">
+                        <img class="document" src="./images/Icons/document.png" />
+                        <h2 class="text document_p">Document</h2>
+                    </a>
+                    <a href="#info">
+                        <img class="info" src="./images/Icons/info.png" />
+                        <h2 class="text info_p">About</h2>
+                    </a>
+                    <a href="#login">
+                        <img class="user-interface" src="./images/Icons/user-interface.png"/>
+                        <h2 class="text user-interface_p">Login</h2>
+                    </a>
                 </div>
                 <div class="overlap">
                     <img class="logo" src="images/Home/logo.png" />
@@ -48,5 +60,6 @@
                 </div>
             </div>
         </div>
+    <script src="Home.js"></script>
     </body>
 </html>
