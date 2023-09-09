@@ -95,7 +95,7 @@ body{
     font-size: 16px;
     position: absolute;
     top: 60px;
-    left: 20px;
+    left: 10px;
     visibility:hidden;
     transition: 0.1s;
 }
