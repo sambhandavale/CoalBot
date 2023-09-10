@@ -1,17 +1,52 @@
+var isMenuExpanded = false; // Variable to track the menu state
+
+document.querySelector(".min-max_button").addEventListener("click", function () {
+  var menu = document.getElementsByClassName('menu-bar')[0];
+  var slide = document.getElementsByClassName('min_max')[0];
+
+  if (isMenuExpanded) {
+    // If the menu is currently expanded, contract it
+    menu.style.width = "60px";
+    slide.style.left = "0px";
+    isMenuExpanded = false;
+    var words = document.getElementsByClassName('text');
+    for (var i = 0; i < words.length; i++) {
+    words[i].style.visibility = 'hidden';
+    var searchInput = document.getElementById('search-input');
+    searchInput.style.visibility = 'hidden';
+    var slide = document.getElementsByClassName('min-max_button')[0];
+    slide.style.left = "0px";
+    }
+  } else {
+    // If the menu is currently contracted, expand it
+    menu.style.alignItems = "start";
+    menu.style.padding = "0px 0px 0px 28px";
+    menu.style.width = "280px";
+    var words = document.getElementsByClassName('text');
+    for (var i = 0; i < words.length; i++) {
+    words[i].style.visibility = 'visible';
+    }
+    isMenuExpanded = true;
+    var slide = document.getElementsByClassName('min-max_button')[0];
+    slide.style.left = "100px";
+  }
+});
+
+
 document.querySelector(".button").addEventListener("click", function() {
-     document.querySelector("section").classList.add("search-bar");
      var searchInput = document.getElementById('search-input');
      searchInput.style.visibility = 'visible';
      var result = document.getElementsByClassName('autocomplete-results')[0];
      result.style.visibility = 'visible';
-     var menu = document.getElementsByClassName('menu-bar')[0];
-     menu.style.width = "280px";
-  });
+     var searchButton = document.querySelector(".button");
+     searchButton.style.display = 'none';
+});
+
 
 const autocompleteData = [
-    { name: "login", link: "#login" },
-    { name: "chatbot", link: "#chatbot" },
-    { name: "about", link: "#about" },
+    { name: "Login", link: "#login" },
+    { name: "Chatbot", link: "./Chatbot.html" },
+    { name: "About", link: "./About.html" },
 ];
 
 const searchInput = document.getElementById("search-input");
@@ -66,4 +101,3 @@ document.addEventListener("click", function (event) {
         autocompleteResults.style.display = "none";
     }
 });
-
