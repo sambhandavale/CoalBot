@@ -12,6 +12,7 @@ body{
 
 .frame .menu-bar {
     display:flex;
+    position: fixed;
     width: 90px;
     height: 789px;
     padding:0;
@@ -332,4 +333,34 @@ body{
     letter-spacing: 0;
     line-height: normal;
     white-space: nowrap;
+}
+footer{
+    width: 1600px;
+    height: 300px;
+    display:flex;
+    gap:15px;
+    background-color: #213555;
+    flex-direction: column;
+    align-items: center
+}
+footer .logo2{
+    width:100px;
+    height:100px;
+    padding:10px;
+}
+footer h3{
+    color:white;
+    font-family: 'Poppins', sans-serif;
+}
+nav{
+    display:flex;
+    gap:40px;
+}
+nav img{
+    width:50px;
+}
+nav .line{
+    width:2px;
+    height:50px;
+    background:black;
 }
