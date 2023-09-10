@@ -11,32 +11,27 @@ body{
 }
 
 .frame .menu-bar {
-    position: absolute;
-    width: 120px;
+    display:flex;
+    width: 90px;
     height: 789px;
-    top: 0;
-    left: 0;
-    z-index:2;
+    padding:0;
     background-color: #C0C0C0;
     overflow: hidden;
-    transition: width 1s;
-    opacity:0.9;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
 }
-.frame .menu-bar1{
-    width: 280px;
-}
-.menu-bar h2{
+.menu-bar .text{
     font-family: 'Poppins', sans-serif;
-}
-.frame .menu-bar:hover{
-   width:280px;
+    visibility:hidden;
 }
 
 .frame .text{
    color:black;
+   z-index:3;
 }
 
-.frame h2:after {
+.frame .text:after {
   content: "";
   position: absolute;
   left: 0;
@@ -49,9 +44,26 @@ body{
 .frame h2:hover:after {
   width: 100%;
 }
+.menu-bar .min_max{
+   display:flex;
+   position:relative;
+   left:0px;
+   flex-direction: column;
+   gap:3px;
+   width:34px;
+   height:20px;
+}
+.min-max_button{
+   position:relative;
+   left:0;
+   background-color: transparent;
+   border: none;
+   padding: 0;
+   cursor: pointer;
+}
 .button {
     position: absolute;
-    top: 85px;
+    top: 130px;
     left: 120px;
     background-color: transparent;
     border: none;
@@ -62,138 +74,107 @@ body{
     text-align: left;
     display: flex;
     align-items: center;
+    visibility:visible;
 }
 .button h2{
    margin:0;
 }
 .button .icon {
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     margin-right: 10px;
 }
-.frame .search {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 80px;
-    left: 40px;
+.menu-bar img {
+    width: 35px;
+    height: 35px;
     object-fit: cover;
 }
-
-.search-container {
-    display: flex;
-    align-items: center;
-    width: 280px;
-    margin: 20px;
-    position: relative;
-}
-.search-bar{
-   visibility:hidden;
+.search-icons{
+   visibility:visible;
 }
 #search-input {
-    background-color: #ffffff;
     padding: 10px;
-    border: 2px solid #383838;
     outline: none;
     font-size: 16px;
     position: absolute;
-    top: 60px;
-    left: 10px;
+    top: 162px;
+    left: 80px;
+    z-index:5;
     visibility:hidden;
-    transition: 0.1s;
 }
 .autocomplete-results{
     position: absolute;
-    width: 195px;
-    top: 100px;
-    left: 10px;
+    width: 197px;
+    top: 203px;
+    left: 79.5px;
     background:white;
     border-radius:0px 0px 20px 20px;
     padding:10px;
     cursor: pointer;
     visibility:hidden;
     font-family: 'Poppins', sans-serif;
-    border: 2px solid #383838;
+    border: 0.01px solid #383838;
 }
-
-
-.frame .chatbot {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 261px;
-    left: 40px;
+.button h2{
+    position:absolute;
+    top:35px;
+}
+.menu-bar .chatbot {
+    width: 35px;
+    height: 35px;
     object-fit: cover;
 }
-.frame .chatbot_p{
+.menu-bar .chatbot_p{
     position: absolute;
-    top: 245px;
+    top: 280px;
     left: 120px;
 }
-.frame .document {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 394px;
-    left: 40px;
+.menu-bar .document {
+    width: 35px;
+    height: 35px;
     object-fit: cover;
 }
-.frame .document_p{
+.menu-bar .document_p{
     position: absolute;
-    top: 375px;
+    top: 415px;
     left: 120px;
 }
 .frame .info {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 527px;
-    left: 40px;
+    width: 35px;
+    height: 35px;
     object-fit: cover;
 }
-.frame .info_p{
+.menu-bar .info_p{
     position: absolute;
-    top: 510px;
+    top: 550px;
     left: 120px;
 }
-.frame .user-interface {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    top: 660px;
-    left: 40px;
+.menu-bar .user-interface {
+    width: 35px;
+    height: 35px;
     object-fit: cover;
 }
 .frame .user-interface_p{
     position: absolute;
-    top: 640px;
+    top: 685px;
     left: 120px;
 }
 
-.frame .line1 {
-    position: absolute;
+.menu-bar .line1 {
     width: 34px;
     height: 3px;
-    top: 50px;
-    left: 46px;
     background-color:white;
 }
 
-.frame .line2 {
-    position: absolute;
+.menu-bar .line2 {
     width: 34px;
     height: 3px;
-    top: 56px;
-    left: 46px;
     background-color:white;
 }
 
-.frame .line3 {
-    position: absolute;
+.menu-bar .line3 {
     width: 17px;
     height: 3px;
-    top: 62px;
-    left: 63px;
     background-color:white;
 }
 
