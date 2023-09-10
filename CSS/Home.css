@@ -21,6 +21,7 @@ body{
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    z-index:2;
 }
 .menu-bar .text{
     font-family: 'Poppins', sans-serif;
@@ -185,6 +186,7 @@ body{
     position: absolute;
     height: 789px;
     top: 0;
+    z-index:1;
 }
 
 .frame .logo {
