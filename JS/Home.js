@@ -39,7 +39,7 @@ document.querySelector(".button").addEventListener("click", function() {
      var result = document.getElementsByClassName('autocomplete-results')[0];
      result.style.visibility = 'visible';
      var searchButton = document.querySelector(".button");
-     searchButton.style.display = 'none';
+     searchButton.style.visibility = 'hidden';
 });
 
 
